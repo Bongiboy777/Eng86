@@ -51,7 +51,7 @@ namespace Lab_10_DataTypes2
             Console.WriteLine(s.ElapsedMilliseconds);
 
             var rnd = new Random();
-            Console
+
 
             
         }
