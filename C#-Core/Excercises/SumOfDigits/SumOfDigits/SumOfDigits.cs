@@ -25,15 +25,21 @@ namespace SumOfDigits
 			*/
 
 
-			long output = combine(input);
+			//long output = combine(input);
 
-			while(output > 10)
+			//while(output > 10)
+			//         {
+			//	output = combine(output);
+
+			//         }
+
+			//return output;
+			if (input == 0)
             {
-				output = combine(output);
-
+				return 0;
             }
+			return (input % 9 == 0) ? 9: input % 9;
 
-			return output;
 		}
 
 		public static long combine(long input)
