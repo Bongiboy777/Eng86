@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Linq;
 namespace IterationLib
 {
     public class Highest

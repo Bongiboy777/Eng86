@@ -16,28 +16,37 @@ namespace IterationLib
         // returns the lowest number in the array nums
         public static int Lowest(int[] nums)
         {
-            int index = 0;
-            int compareIndex = 0;
-            if (nums.Length == 0)
-            {
-                return int.MaxValue;
-            }
-            while (compareIndex < nums.Length - 1)
-            {
-                if (nums[index] <= nums[compareIndex])
-                {
-                    compareIndex++;
-                    continue;
-                }
+            //int index = 0;
+            //int compareIndex = 0;
+            //if (nums.Length == 0)
+            ////{
+            ////    return int.MaxValue;
+            ////}
+            ////while (compareIndex < nums.Length - 1)
+            ////{
+            ////    if (nums[index] <= nums[compareIndex])
+            ////    {
+            ////        compareIndex++;
+            ////        continue;
+            ////    }
 
-                else
+            ////    else
+            ////    {
+            ////        index++;
+            ////        compareIndex = 0;
+            ////    }
+            ////}
+            //return nums[index];
+
+            var lowest = Int32.MaxValue;
+            foreach (var m in nums)
+            {
+                if(m < lowest)
                 {
-                    index++;
-                    compareIndex = 0;
+                    lowest = m;
                 }
             }
-            return nums[index];
-
+            return lowest;
         }
 
         // returns the sum of all numbers between 1 and n inclusive that are divisible by either 2 or 5
