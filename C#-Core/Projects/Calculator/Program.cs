@@ -6,7 +6,7 @@ namespace CalculatorLib
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 
@@ -27,14 +27,20 @@ namespace CalculatorLib
             return sum;
         }
 
-        public static float Add(float[] nums)
+        public static double Add(double[] nums)
         {
-            float sum = 0;
+            double sum = 0;
             for (int i = 0; i < nums.Length; i++)
             {
                 sum += nums[i];
             }
             return sum;
+        }
+
+        public static double Add(double numA, double numB)
+        {
+            
+            return numA + numB;
         }
 
         public static int Subtract(int a, int b)

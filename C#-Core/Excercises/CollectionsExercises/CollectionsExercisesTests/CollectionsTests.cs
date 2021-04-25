@@ -3,6 +3,8 @@ using NUnit.Framework;
 using CollectionsExercisesLib;
 using System.Collections.Generic;
 using NUnit.Framework.Internal;
+using CollectionsExercises;
+
 
 namespace CollectionsExercisesTests
 {
@@ -15,7 +17,7 @@ namespace CollectionsExercisesTests
         [TestCase("4395862328567590638356894", "[4, 2][3, 4][9, 3][5, 4][8, 4][6, 4][2, 2][7, 1][0, 1]")]
         public void GivenAString_CountDigits_ReturnsACountOfEachDigit(string input, string expectedOutput)
         {
-            var result = CollectionsExercises.CountDigits(input);
+            var result = CollectionsExercisesClass.CountDigits(input);
             Assert.AreEqual(expectedOutput, result);
         }
     }
@@ -39,7 +41,7 @@ namespace CollectionsExercisesTests
         public void GivenANumber_NextInQueue_ReturnsCorrectNames(int num, string expectedNames)
         {
 
-            var result = CollectionsExercises.NextInQueue(num, _queue);
+            var result = CollectionsExercisesClass.NextInQueue(num, _queue);
             Assert.AreEqual(expectedNames, result);
         }
 
@@ -48,13 +50,13 @@ namespace CollectionsExercisesTests
         [TestCase(1, 4)]
         public void GivenANumber_NextInQueue_RemoveExpectedNumberFromTheQueue(int num, int expectedQueueCount)
         {
-            var result = CollectionsExercises.NextInQueue(num, _queue);
+            var result = CollectionsExercisesClass.NextInQueue(num, _queue);
             Assert.AreEqual(expectedQueueCount, _queue.Count);
         }
         [Test]
         public void NextInQueue_DoesNotThrowException_IfTheQueueIsTooShort()
         {
-            var result = CollectionsExercises.NextInQueue(7, _queue);
+            var result = CollectionsExercisesClass.NextInQueue(7, _queue);
             Assert.AreEqual(0, _queue.Count);
             Assert.AreEqual("Cathy, Jim, Petra, Moxie, Petunia", result);
         }
@@ -66,7 +68,7 @@ namespace CollectionsExercisesTests
         public void GivenAnEmptyArray_Reverse_ReturnsAnEmptyArray()
         {
             int[] array = { };
-            var result = CollectionsExercises.Reverse(array);
+            var result = CollectionsExercisesClass.Reverse(array);
             Assert.AreEqual(0, array.Length);
         }
 
@@ -74,11 +76,13 @@ namespace CollectionsExercisesTests
         public void GivenAnArray_Reverse_ReturnsTheArrayInReverse()
         {
             int[] array = { 10, 20, 30, 40, 50 };
-            var result = CollectionsExercises.Reverse(array);
+            var result = CollectionsExercisesClass.Reverse(array);
             Assert.AreEqual(5, array.Length);
             for (int i = 0; i < 5; i++)
             {
                 Assert.AreEqual(array[4 - i], result[i]);
             }
         }
+    }
+}
    
