@@ -5,14 +5,14 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorLib", "CalculatorLib.csproj", "{CA8D68D1-2D82-44BD-B0AB-78C4F44ADAAB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorTests", "..\CalculatorTests\CalculatorTests.csproj", "{166069E4-174A-450A-9980-E5FC8D51767E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArithmeticTests", "..\CalculatorTests\ArithmeticTests.csproj", "{166069E4-174A-450A-9980-E5FC8D51767E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorApp", "..\CalculatorApp\CalculatorApp.csproj", "{C2FC5E75-C84B-4CBA-8E53-3D71CF9952DF}"
 	ProjectSection(ProjectDependencies) = postProject
 		{166069E4-174A-450A-9980-E5FC8D51767E} = {166069E4-174A-450A-9980-E5FC8D51767E}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorAppTests", "..\CalculatorAppTests\CalculatorAppTests.csproj", "{6BF3EF7D-7165-4C92-907E-7AB481E8F674}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorAppTests", "..\CalculatorAppTests\CalculatorAppTests.csproj", "{6BF3EF7D-7165-4C92-907E-7AB481E8F674}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

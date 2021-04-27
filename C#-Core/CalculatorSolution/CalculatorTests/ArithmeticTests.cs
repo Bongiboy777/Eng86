@@ -2,7 +2,7 @@ using NUnit.Framework;
 using CalculatorLib;
 
 
-namespace CalculatorTests
+namespace ArithmeticTests
 {
     public class ArithmeticCalculations
     {

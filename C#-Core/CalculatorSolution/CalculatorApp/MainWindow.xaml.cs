@@ -43,27 +43,28 @@ namespace CalculatorApp
                     break;
 
                 case "=":
+
                     Cal.Text = Calculate(Cal.Text).ToString();
                     break;
 
                 default:
 
-                    Cal.Text = Cal.Text != "0"  && input != "0" ? Cal.Text + input: input;
+                    Cal.Text += input;
                     break;
             }
            
         }
 
-        public static long combine(long input)
-        {
-            int sum = 0;
-            int[] output = Array.ConvertAll(input.ToString().ToCharArray(), element => (int)char.GetNumericValue(element));
-            for (int i = 0; i < output.Length; i++)
-            {
-                sum += output[i];
-            }
-            return sum;
-        }
+        //public static long combine(long input)
+        //{
+        //    int sum = 0;
+        //    int[] output = Array.ConvertAll(input.ToString().ToCharArray(), element => (int)char.GetNumericValue(element));
+        //    for (int i = 0; i < output.Length; i++)
+        //    {
+        //        sum += output[i];
+        //    }
+        //    return sum;
+        //}
 
         public static int Calculate(string calculation)
         {
@@ -92,8 +93,17 @@ namespace CalculatorApp
                 int product = 1;
                 List<string> Factors = calculation.Split('/').ToList<string>();
 
-             
-                output += MathLib.Divide(int.Parse(Factors[0]),int.Parse(Factors[1]));
+                try
+                {
+                    output += MathLib.Divide(int.Parse(Factors[0]), int.Parse(Factors[1]));
+
+                }
+
+                catch(Exception e)
+                {
+                    
+                    throw new Exception("Cant divide by 0.");
+                }
             }
 
             if (calculation.Contains('+'))
@@ -113,7 +123,7 @@ namespace CalculatorApp
                 output += sum;
             }
 
-            if (calculation.Contains('-'))
+            if (calculation.Contains('-') && calculation[0] != '-')
             {
                 int sum = 0;
                 List<string> Adds = calculation.Split('-').ToList<string>();
@@ -126,16 +136,35 @@ namespace CalculatorApp
                         sum = MathLib.Subtract(sum, num);
                     }
                 }
-                    
-
-                
                 output += sum;
+            }
+
+            if (calculation.Contains('%'))
+            {
+                
+                List<string> Factors = calculation.Split('%').ToList<string>();
+                output += MathLib.Modulus(int.Parse(Factors[0]), int.Parse(Factors[1]));
             }
 
 
             return output;
 
         }
+
+        public static string Bodmas(string calculation)
+        {
+            string res = "";
+            
+            char[] ProductOperatives = {'x','/'};
+            char[] Sumoperatives = {'-', '+'};
+   
+            
+            return res;// new string(calculation.TakeWhile(operation => !ProductOperatives.Contains(operation)).ToArray());
+   
+          
+
+        }
+
 
         public void AddButtonClick(object sender, RoutedEventArgs e)
         {

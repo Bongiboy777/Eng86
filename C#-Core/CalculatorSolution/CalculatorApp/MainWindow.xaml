@@ -45,13 +45,13 @@
         <!--=Basic Arithmetic Buttons=-->
         <!--<Button Grid.Row="3" Grid.Column="3">(</Button>
         <Button Grid.Row="3" Grid.Column="4">)</Button>-->
-        <Button Grid.Row="4" Grid.Column="4" Click="NumberButtonClick">Left</Button>
-        <Button Grid.Row="4" Grid.Column="5" Click="NumberButtonClick">Right</Button>
+        <!--<Button Grid.Row="4" Grid.Column="4" Click="NumberButtonClick">Left</Button>
+        <Button Grid.Row="4" Grid.Column="5" Click="NumberButtonClick">Right</Button>-->
         <Button Grid.Row="2" Grid.Column="4" Click="NumberButtonClick">x</Button>
         <Button Grid.Row="2" Grid.Column="5" Click="NumberButtonClick">/</Button>
         <Button Grid.Row="3" Grid.Column="4" Click="NumberButtonClick">+</Button>
         <Button Grid.Row="3" Grid.Column="5" Click="NumberButtonClick">-</Button>
-        <Button Grid.Row="5" Grid.Column="1" Click="NumberButtonClick">.</Button>
+        <Button Grid.Row="5" Grid.Column="1" Click="NumberButtonClick">%</Button>
         <Button Grid.Row="5" Grid.Column="2" Click="NumberButtonClick">=</Button>
         <Button Grid.Row="5" Grid.Column="4" Click="NumberButtonClick">CLR</Button>
         <Button Grid.Row="5" Grid.Column="5" Click="NumberButtonClick">Del</Button>
