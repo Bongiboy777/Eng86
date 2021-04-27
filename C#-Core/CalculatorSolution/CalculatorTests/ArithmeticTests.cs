@@ -1,9 +1,10 @@
 using NUnit.Framework;
 using CalculatorLib;
 
-namespace CalculatorTests
+
+namespace ArithmeticTests
 {
-    public class StaticCalculatorTest
+    public class ArithmeticCalculations
     {
         [SetUp]
         public void Setup()
@@ -107,4 +108,5 @@ namespace CalculatorTests
             Assert.AreEqual(expected, MathLib.Modulus(numA, numB));
         }
     }
+
 }

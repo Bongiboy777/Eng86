@@ -1,0 +1,82 @@
+﻿<Window x:Class="CalculatorApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculatorApp"
+        mc:Ignorable="d"
+        Title="Calculator" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="Cal" IsReadOnly="True" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="10" Grid.RowSpan="2" Background="Beige"/>
+
+        <!--=Numbers/Digits=-->
+        <Button Grid.Row="5" Grid.Column="0" Click="NumberButtonClick">0</Button>
+        <Button Grid.Row="4" Grid.Column="0" Click="NumberButtonClick">1</Button>
+        <Button Grid.Row="4" Grid.Column="1" Click="NumberButtonClick">2</Button>
+        <Button Grid.Row="4" Grid.Column="2" Click="NumberButtonClick">3</Button>
+        <Button Grid.Row="3" Grid.Column="0" Click="NumberButtonClick">4</Button>
+        <Button Grid.Row="3" Grid.Column="1" Click="NumberButtonClick">5</Button>
+        <Button Grid.Row="3" Grid.Column="2" Click="NumberButtonClick">6</Button>
+        <Button Grid.Row="2" Grid.Column="0" Click="NumberButtonClick">7</Button>
+        <Button Grid.Row="2" Grid.Column="1" Click="NumberButtonClick">8</Button>
+        <Button Grid.Row="2" Grid.Column="2" Click="NumberButtonClick">9</Button>
+        <!--=Numbers/Digits=-->
+
+        <!--=Basic Arithmetic Buttons=-->
+        <!--<Button Grid.Row="3" Grid.Column="3">(</Button>
+        <Button Grid.Row="3" Grid.Column="4">)</Button>-->
+        <!--<Button Grid.Row="4" Grid.Column="4" Click="NumberButtonClick">Left</Button>
+        <Button Grid.Row="4" Grid.Column="5" Click="NumberButtonClick">Right</Button>-->
+        <Button Grid.Row="2" Grid.Column="4" Click="NumberButtonClick">x</Button>
+        <Button Grid.Row="2" Grid.Column="5" Click="NumberButtonClick">/</Button>
+        <Button Grid.Row="3" Grid.Column="4" Click="NumberButtonClick">+</Button>
+        <Button Grid.Row="3" Grid.Column="5" Click="NumberButtonClick">-</Button>
+        <Button Grid.Row="5" Grid.Column="1" Click="NumberButtonClick">%</Button>
+        <Button Grid.Row="5" Grid.Column="2" Click="NumberButtonClick">=</Button>
+        <Button Grid.Row="5" Grid.Column="4" Click="NumberButtonClick">CLR</Button>
+        <Button Grid.Row="5" Grid.Column="5" Click="NumberButtonClick">Del</Button>
+        <!--=Basic Arithmetic Buttons=-->
+
+        <!--=Trigonometric Buttons=-->
+        <!--<Button Grid.Row="3" Grid.Column="1">Cos</Button>
+        <Button Grid.Row="3" Grid.Column="2">Tan</Button>
+        <Button Grid.Row="3" Grid.Column="0">Sin</Button>
+        <Button Grid.Row="6" Grid.Column="7">Pi</Button>-->
+
+        <!--=Trigonometric Buttons=-->
+
+        <!--=Extra Math Buttons=-->
+        <!--<Button Grid.Row="7" Grid.Column="6">Store</Button>
+        <Button Grid.Row="7" Grid.Column="7">X</Button>
+        <Button Grid.Row="7" Grid.Column="8">Y</Button>
+        <Button Grid.Row="7" Grid.Column="9">Z</Button>-->
+        <!--=Extra Math Button Buttons=-->
+
+        <!--=Extra Math Buttons=-->
+        <!--<Button Grid.Row="6" Grid.Column="9">!</Button>
+        <Button Grid.Row="6" Grid.Column="8">ln</Button>
+        <Button Grid.Row="4" Grid.Column="4">Log</Button>
+        <Button Grid.Row="6" Grid.Column="6">e</Button>-->
+
+    </Grid>
+</Window>
