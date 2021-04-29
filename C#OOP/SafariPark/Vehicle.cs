@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SafariPark
 {
-    public class Vehicle
+    public class Vehicle: IMoveable
     {
-        private int _capacity, _numPassengers, _speed;
+        protected int _capacity, _numPassengers, _speed;
         public int NumPassengers {
             get { return _numPassengers; } 
             set {
@@ -19,22 +19,22 @@ namespace SafariPark
 
         public int Position { get; private set; }
 
-        public string Move()
+        public virtual string Move()
         {
             Position += _speed;
             return "Moving along.";
         }
 
-        public string Move(int times)
+        public virtual string Move(int times)
         {
             Position += _speed * times;
             return $"Moving along {times} times.";
 
         }
 
-        public Vehicle(int speed = 10)
+        public Vehicle()
         {
-            _speed = speed;
+            _speed = 10;
             _capacity = 4;
         }
 
@@ -43,6 +43,12 @@ namespace SafariPark
             _capacity = capacity;
             _speed = speed;
 
+        }
+
+
+        public override string ToString()
+        {
+            return $" capacity: {_capacity} passengers: {_numPassengers} speed: {_speed} position: {Position}";
         }
 
     }

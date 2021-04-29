@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SafariPark
 {
-    public class Person
+    public class Human: Entity
     {
+
         string _firstName;
         string _lastName;
         int _age;
@@ -17,11 +18,24 @@ namespace SafariPark
                         value; }
         }
 
-        public Person(string fName,string lName, int age)
+        public Human()
         {
+            _lastName = "Luwemba";
+            _firstName = "Bongani";
+            Age = 22;
+        }
+
+        public Human(string fName,string lName, int age)
+        {
+            
             _lastName = lName;
             _firstName = fName;
             Age = age;
+        }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()} Name: {_firstName} Age: {Age}";
         }
 
         public string GetFullName()

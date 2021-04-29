@@ -1,18 +1,108 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="SafariPark.Spartan">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="SafariPark.Human">
+    <Position X="3" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Spartan.cs</FileName>
+      <HashCode>AAEAAAAAAAAAAAAEAEEAAAAAAAAAAAgIAAAAAAAAAAA=</HashCode>
+      <FileName>Human.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SafariPark.Person">
-    <Position X="2.5" Y="0.5" Width="1.5" />
+  <Class Name="SafariPark.Vehicle">
+    <Position X="6.5" Y="3.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAEEAAAAAAAAAAAgIAAAAAAAAAAA=</HashCode>
-      <FileName>Person.cs</FileName>
+      <HashCode>AAAAAAAAAoAAAAAkEAAAAAQAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Vehicle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SafariPark.Hunter">
+    <Position X="1" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAIAAAAgACAAAABAAAAA=</HashCode>
+      <FileName>Hunter.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="System.Object">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SafariPark.Airplane">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAJAIAAAACEAAAAggAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Airplane.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SafariPark.Guns" Collapsed="true">
+    <Position X="11.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAAAEAAAgAARAAAAAAAABAAAIAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Guns.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SafariPark.LaserGun">
+    <Position X="14.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAABAAAAAAAAAQAAAAAAAAACAAAABAAAAA=</HashCode>
+      <FileName>Guns.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SafariPark.WaterPistol">
+    <Position X="11" Y="6.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="SafariPark.WaterPistol.Spear" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Guns.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="SafariPark.WaterPistol.FireSpear" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Guns.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="SafariPark.WaterPistol.ThunderDagger" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Guns.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="SafariPark.WaterPistol.WaterMace" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Guns.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="SafariPark.WaterPistol.Knife" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Guns.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="SafariPark.WaterPistol.Club" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Guns.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAABAAAAAAAAAQAAAAAAAAACAAAABAAAAA=</HashCode>
+      <FileName>Guns.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SafariPark.IShootable" Collapsed="true">
+    <Position X="11.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IShootable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SafariPark.IMelee">
+    <Position X="13" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IMelee.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

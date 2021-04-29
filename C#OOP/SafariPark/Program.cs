@@ -1,27 +1,40 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SafariPark
 {
     class Program
     {
+        
+
+        public static Ammo laser = new Ammo(AmmoTypes.laserFuel, "lsr");
+
+        public static Weapon laserPistol = new LaserGun("Guns4Us") { SelectedAmmo = laser };
+
+        static List<Hunter> hunters = new List<Hunter>()
+            {
+                new Hunter(laserPistol),
+                new Hunter(new WaterPistol("Water Works"))
+            };
         static void Main(string[] args)
         {
-            Person Mike = new Person("Mike", "Rodriguez", 32);
-            Console.WriteLine(Mike.GetFullName());
-            Person Beth = new Person("Beth", "Smith", 31);
-            Console.WriteLine(Beth.GetFullName());
-            Spartan Bongani = new Spartan {_firstName = "", _lastName = "" };
+            Console.WriteLine(hunters[0].Attack().CalculateDamage());
+            Console.WriteLine(AmmoTypes._shotGunCartridge.Damage.CalculateDamage());
 
-            Point3D point;
-            point.Y = 4;
-            point.X = point.Z = 3;
 
-            
-        }
+            //AmmoType shell = new AmmoType(new Damage());
 
-        public static void PlacePerson(Point3D pos, Person p)
-        {
-            Console.WriteLine($"{p.GetFullName()} is at position {pos.X}, {pos.Y}, {pos.Z}.");
+
+
+
+
+            //Hunter hunter = new Hunter(new LaserGun("Guns4Us"));
+
+
+            //hunters.ForEach(x => Console.WriteLine(x.Attack()));
         }
     }
 }
+
+
+
