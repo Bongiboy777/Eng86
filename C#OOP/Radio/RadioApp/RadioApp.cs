@@ -26,7 +26,7 @@ namespace RadioApp
         {
             channels = new List<WindowsMediaPlayerClass>()
             {
-                new WindowsMediaPlayerClass(),
+                new WindowsMediaPlayerClass(){r },
                 new WindowsMediaPlayerClass(),
                 new WindowsMediaPlayerClass(),
                 new WindowsMediaPlayerClass(),
