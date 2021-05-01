@@ -13,8 +13,6 @@ namespace SafariPark
         public int Durability { get => _durability; set => _durability = value; }
         public Damage AttackDmg { get => _attackDmg; set => _attackDmg = value; }
 
-        
-
         public readonly string _brand;
 
         public override string ToString()

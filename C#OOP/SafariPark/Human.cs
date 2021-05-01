@@ -18,20 +18,22 @@ namespace SafariPark
                         value; }
         }
 
-        public Human()
+        public Human(int health = 50):base(health)
         {
             _lastName = "Luwemba";
             _firstName = "Bongani";
             Age = 22;
         }
 
-        public Human(string fName,string lName, int age)
+        public Human(string fName,string lName, int age, int health = 50): base(health)
         {
             
             _lastName = lName;
             _firstName = fName;
             Age = age;
         }
+
+
 
         public override string ToString()
         {

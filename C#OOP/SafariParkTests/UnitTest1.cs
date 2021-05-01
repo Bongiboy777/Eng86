@@ -6,9 +6,6 @@ namespace SafariParkTests
     public class HumanTests
     {
 
-      
-        
-
         [TestCase("King", "Bong", "King Bong")]
         public void HumanConstructorTest(string fName, string lName, string fullNameExpected)
         {
@@ -23,6 +20,18 @@ namespace SafariParkTests
             Human person = new Human("A", "L", 20);
 
             Assert.AreEqual(20, person.Age);
+        }
+
+        [TestCase(0, 1)]
+        [TestCase(-20, 1)]
+        [TestCase(int.MaxValue,100)]
+        [TestCase(120, 100)]
+        [TestCase(30, 30)]
+        public void HealthTest(int health, int expectedHealth)
+        {
+            Human person = new Human(health);
+
+            Assert.AreEqual(person.Health,expectedHealth);
         }
     }
 
@@ -170,6 +179,24 @@ namespace SafariParkTests
         public void Setup()
         {
             
+
+        }
+
+        [Test]
+        public void HunterDealsDamage()
+        {
+            Assert.Pass();
+        }
+    }
+
+    public class EntityMovementTests
+    {
+        private Hunter h;
+        private Weapon pistol;
+        [SetUp]
+        public void Setup()
+        {
+
 
         }
 

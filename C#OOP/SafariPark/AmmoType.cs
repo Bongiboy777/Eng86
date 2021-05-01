@@ -6,51 +6,40 @@ using System.Threading.Tasks;
 
 namespace SafariPark
 {
-    public class Ammo
+    public struct Ammo: IEquatable<Ammo>
     {
-        
+        private Damage _damage;
+        public Damage Damage { get => _damage; }
+
         private readonly string _brand;
-        public AmmoType _ammoType;
         public string Brand { get { return _brand; } }
 
-        public Ammo(AmmoType ammoType,string brand)
+        public Ammo(int blnt = 3, int pierce = 3, int strk = 3, string brand = "Guns4Us")
         {
             _brand = brand;
-            _ammoType = ammoType;
-
+            _damage = new Damage(new Elemental(0, 0, 0, 3), blnt, pierce, strk);
         }
-}
-    public class AmmoType
-    {
 
-        private Damage _damage;
-        public Damage Damage { get => _damage;}
-        public AmmoType(Damage damage)
+        public Ammo(Damage damage, string brand = "Guns4Us")
         {
-            
+            _brand = brand;
             _damage = damage;
         }
-
-        public AmmoType(int blnt = 3, int pierce = 3,int strk = 3)
+        public bool Equals(Ammo other)
         {
-
-            _damage = new Damage(new Elemental(0,0,0,3), blnt,pierce,strk);
+            return other.GetHashCode() == this.GetHashCode();
         }
-
-        //public AmmoType(i)
-        //{
-
-        //    _damage = damage;
-        //}
     }
+   
 
-    public static class AmmoTypes
+    public class Ammos
     {
-        public static readonly AmmoType _shotGunCartridge = new AmmoType(5, 3, 2);
-        public static readonly AmmoType _regBullet = new AmmoType(2, 2, 2);
-        public static readonly AmmoType _sniperRound = new AmmoType(1, 8, 5);
-        public static readonly AmmoType _grenade = new AmmoType(new Damage(Element.FIRE, 3, 9, 8));
-        public static readonly AmmoType laserFuel = new AmmoType(new Damage(Element.FIRE, 3, 9, 8));
+        public static readonly Ammo water = new Ammo(new Damage(Element.WATER, 2,1,1));
+        public static readonly Ammo _shotGunCartridge = new Ammo(5, 3, 2);
+        public static readonly Ammo _regBullet = new Ammo(2, 2, 2);
+        public static readonly Ammo _sniperRound = new Ammo(1, 8, 5);
+        public static readonly Ammo _grenade = new Ammo(new Damage(Element.FIRE, 3, 6, 8));
+        public static readonly Ammo laserFuel = new Ammo(new Damage(Element.FIRE*2, 0, 10, 2));
     }
 
 

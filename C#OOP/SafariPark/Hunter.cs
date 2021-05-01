@@ -40,10 +40,6 @@ namespace SafariPark
                     var gun = (WaterPistol)_weapon;
                     return gun.Shoot(2);
                 }
-
-
-
-
                 return new Damage();
 
             }

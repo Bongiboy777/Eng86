@@ -8,7 +8,8 @@ namespace SafariPark
 {
     public abstract class Gun : Weapon, IShootable
     {
-        private List<AmmoType> _ammoTypes = new List<AmmoType>{AmmoTypes.laserFuel };
+        public List<Ammo> _ammoTypes = new List<Ammo>();
+        public List<Ammo> AmmoTypes { get => _ammoTypes; set => _ammoTypes = value; }
 
         private Ammo selectedAmmo;
 
@@ -20,9 +21,13 @@ namespace SafariPark
         {
             get => selectedAmmo;
             set { 
-                if (_ammoTypes.Contains(value._ammoType))
+                if (_ammoTypes.Contains(value))
                     { selectedAmmo = value; }
-                else { Console.WriteLine($"{this} does not take {value._ammoType} as ammo."); }
+                else { 
+                    Console.WriteLine($"{this} does not take {value} as ammo.");
+                    Console.WriteLine(_ammoTypes[0].GetHashCode());
+                    Console.WriteLine(value.GetHashCode());
+                }
                 
             }
         }
@@ -59,17 +64,18 @@ namespace SafariPark
 
     public class LaserGun : Gun
     {
-        
+
         public LaserGun(string brand) : base(brand, 100)
         {
-
+            AmmoTypes = new List<Ammo>() { Ammos.laserFuel };
+            SelectedAmmo = Ammos.laserFuel;
         }
         public override Damage Shoot(int times)
         {
             if (Ammo > 1)
             {
                 Durability -= 5*times;
-                Console.WriteLine($"Peew. Shot with LaserGun\nDamage dealt: {SelectedAmmo._ammoType.Damage.CalculateDamage()}");
+                Console.WriteLine($"Peew. Shot with LaserGun\nDamage dealt: {SelectedAmmo.Damage.CalculateDamage()}");
                 return AttackDmg*times;
             }
 
@@ -94,9 +100,11 @@ namespace SafariPark
 
     public class WaterPistol : Gun
     {
-        
+
         public WaterPistol(string brand) : base(brand, 30)
         {
+            AmmoTypes = new List<Ammo>() { Ammos.water };
+            SelectedAmmo = Ammos.water;
 
         }
         public override Damage Shoot(int times)
