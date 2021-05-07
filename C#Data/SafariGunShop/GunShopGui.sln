@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameData", "GunsData\GameData.csproj", "{174A2F3A-8485-433D-AA2C-095E3D478024}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameDataManager", "GunShopBusiness\GameDataManager.csproj", "{AF75666D-B4ED-4D53-B384-FCDE4B666C9E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GunShopGui", "GunShopGui\GunShopGui.csproj", "{FC492088-E85A-411C-B1B9-3CFD3716E614}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SafariGunShopTests", "SafariGunShopTests\SafariGunShopTests.csproj", "{B10CF8B9-0605-4760-AFAB-DFED160152FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{174A2F3A-8485-433D-AA2C-095E3D478024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174A2F3A-8485-433D-AA2C-095E3D478024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174A2F3A-8485-433D-AA2C-095E3D478024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174A2F3A-8485-433D-AA2C-095E3D478024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF75666D-B4ED-4D53-B384-FCDE4B666C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF75666D-B4ED-4D53-B384-FCDE4B666C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF75666D-B4ED-4D53-B384-FCDE4B666C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF75666D-B4ED-4D53-B384-FCDE4B666C9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC492088-E85A-411C-B1B9-3CFD3716E614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC492088-E85A-411C-B1B9-3CFD3716E614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC492088-E85A-411C-B1B9-3CFD3716E614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC492088-E85A-411C-B1B9-3CFD3716E614}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B10CF8B9-0605-4760-AFAB-DFED160152FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B10CF8B9-0605-4760-AFAB-DFED160152FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B10CF8B9-0605-4760-AFAB-DFED160152FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B10CF8B9-0605-4760-AFAB-DFED160152FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F29E082-C973-465D-AEAC-12E6A2FBF6B5}
+	EndGlobalSection
+EndGlobal

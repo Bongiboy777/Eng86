@@ -14,56 +14,25 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using RadioApp;
+
 namespace RadioGUI
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        MediaPlayer mp = new MediaPlayer();
+        Radio radio;
+        public static ManageChannels channelManager = new ManageChannels();
+        public static PlaylistPlayback RadioPlayer = new PlaylistPlayback();
+        
+   
+        public MainWindow()
+        {
+            InitializeComponent();
+            TopFrame.Content = new TopFramePage();
+            MainFrame.Content = RadioPlayer;
+        }
 
         
 
-        Radio radio = new Radio();
-        public MainWindow()
-        {
-            
-            
-            InitializeComponent();
-            
-
-
-
-
-        }
-
-        public void ToggleOnOff(object sender, RoutedEventArgs e)
-        {
-            if(TogglePower.IsChecked.Value == true)
-            {
-                radio.TurnOn();
-                ChannelDisplay.Text = $"Channel {radio.Channel}";
-                Console.WriteLine("Turning on");
-                mp.Play();
-            }
-            else {
-                radio.TurnOff();
-                ChannelDisplay.Text = $"";
-            }
-        }
-
-        private void ChangeChannel(object sender, RoutedEventArgs e)
-        {
-            if(radio.On)
-            {
-                int channelNum = Int16.Parse((sender as Button).Name.Remove(0, 7));
-                radio.Channel = channelNum;
-                ChannelDisplay.Text = $"{radio.Play()}";
-
-                
-            }
-            
-        }
+        
     }
 }

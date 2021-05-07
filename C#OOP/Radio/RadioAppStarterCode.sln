@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadioApp", "RadioApp\RadioA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadioTests", "RadioTests\RadioTests.csproj", "{A7827AE3-ACFC-4AD1-8BD6-AFB33F02F59B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioGUI", "RadioGUI\RadioGUI.csproj", "{1850C2D6-28F7-45F7-B6FE-AD8B0FC115A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadioGUI", "RadioGUI\RadioGUI.csproj", "{1850C2D6-28F7-45F7-B6FE-AD8B0FC115A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

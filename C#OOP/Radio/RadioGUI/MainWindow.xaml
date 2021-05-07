@@ -5,40 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RadioGUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+        <Frame x:Name="TopFrame" Margin="0,0,0,400"/>
+        <Frame x:Name="MainFrame" Margin="0,50,0,0"/>
 
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-
-        <TextBlock x:Name="ChannelDisplay" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="7" Background="DarkGreen" Margin="0,0,0,54" Grid.RowSpan="2"  ></TextBlock>
-        <ToggleButton x:Name="TogglePower"  Grid.Column="0" Grid.Row="1" Click="ToggleOnOff" IsChecked="False">Power</ToggleButton>
-        <Button x:Name="Channel1" Grid.Column="0" Grid.Row="3" Content="Channel 1" Click="ChangeChannel" Background="AliceBlue"></Button>
-        <Button x:Name="Channel2" Grid.Column="0" Grid.Row="4" Content="Channel 2" Click="ChangeChannel" Background="AliceBlue"></Button>
-        <Button x:Name="Channel3" Grid.Column="0" Grid.Row="5" Content="Channel 3" Click="ChangeChannel" Background="AliceBlue"></Button>
-        <Button x:Name="Channel4" Grid.Column="0" Grid.Row="6" Content="Channel 4" Click="ChangeChannel" Background="AliceBlue"></Button>
-        <MediaElement x:Name="mediaElement" Height="100" Grid.RowSpan="2" Width="100" LoadedBehavior="Manual" UnloadedBehavior="Manual" Source="media\What does the Electoral Commission's probe mean for Boris Johnson  – BBC Newsnight.mp3"/>
-        <MediaElement x:Name="mediaElement1" Height="100" Grid.RowSpan="2" Width="100" LoadedBehavior="Manual" UnloadedBehavior="Manual"/>
-        <MediaElement x:Name="mediaElement2" Height="100" Grid.RowSpan="2" Width="100" LoadedBehavior="Manual" UnloadedBehavior="Manual" Source="media\2Pac_ft_Eric_Williams_-_Do_For_Love_Qoret.com.mp3"/>
-        <MediaElement x:Name="mediaElement3" Height="100" Grid.RowSpan="2" Width="100" LoadedBehavior="Manual" UnloadedBehavior="Manual" Source="media\hard track 1.mp3"/>
     </Grid>
 
 
